@@ -26,14 +26,16 @@
                     <img src="<?php echo $image; ?>" alt="">
                 </div>
                 <h3 class="team__name">
-                    <?php echo $post->name; ?>
+                    <?php the_field("name"); ?>
                 </h3>
-                <h3 class="team__post">
-                    <?php echo $post->post; ?>
-                </h3>
-                <h4 class="team__descr">
-                    <?php echo $post->descr; ?>
-                </h4>
+                <div class="team__hover">
+                    <h3 class="team__post">
+                        <?php echo $post->post; ?>
+                    </h3>
+                    <h4 class="team__descr">
+                        <?php echo $post->descr; ?>
+                    </h4>
+                </div>
             </div>
         <?php endforeach; ?>
     </div>
@@ -48,5 +50,6 @@
                 <path d="M1 1L12 12L1 23" stroke="white" stroke-width="2" />
             </svg>
         </div>
-    </div>
+    </div>    
+    <div class="btn" for="contact">CONTACT US</div>
 </section>

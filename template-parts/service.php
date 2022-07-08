@@ -88,5 +88,6 @@
                 <img src="<?php echo bloginfo('template_url'); ?>/assets/img/image/open-consulting.jpg" alt="">
             </div>
         </div>
-    </div>
+    </div>    
+    <div class="btn" for="cases">OUR CASES</div>
 </section>

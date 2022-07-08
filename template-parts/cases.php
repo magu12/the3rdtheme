@@ -71,6 +71,7 @@
                     <path d="M1 1L12 12L1 23" stroke="white" stroke-width="2" />
                 </svg>
             </div>
-        </div>
+        </div>        
+        <div class="btn" for="team">OUR TEAM</div>
     </div>
 </section>

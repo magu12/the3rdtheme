@@ -6,8 +6,8 @@ get_header();
 
     <?php get_template_part('template-parts/hero'); ?>
     <?php get_template_part('template-parts/service'); ?>
-    <?php get_template_part('template-parts/team'); ?>
     <?php get_template_part('template-parts/cases'); ?>
+    <?php get_template_part('template-parts/team'); ?>
     <?php get_template_part('template-parts/contact'); ?>
     <section index="6" bg-color="black" class="impressum text-block section" link="impressum">
         <div class="text-block__content">
