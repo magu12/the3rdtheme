@@ -21,35 +21,47 @@
 
         ?>
         <?php foreach ($team_members as $post) : $image = get_field("photo"); ?>
-            <div class="team__item">
-                <div class="team__img">
-                    <img src="<?php echo $image; ?>" alt="">
-                </div>
-                <h3 class="team__name">
-                    <?php the_field("name"); ?>
-                </h3>
-                <div class="team__hover">
-                    <h3 class="team__post">
-                        <?php echo $post->post; ?>
+            <?php if ($post->linkedin != '') : ?>
+                <a href="<?php echo $post->linkedin; ?>" target="_blank" class="team__item">
+                <?php else : ?>
+                    <div class="team__item">
+                    <?php
+                endif;
+                    ?>
+                    <div class="team__img">
+                        <img src="<?php echo $image; ?>" alt="">
+                    </div>
+                    <h3 class="team__name">
+                        <?php the_field("name"); ?>
                     </h3>
-                    <h4 class="team__descr">
-                        <?php echo $post->descr; ?>
-                    </h4>
-                </div>
-            </div>
-        <?php endforeach; ?>
+                    <div class="team__hover">
+                        <h3 class="team__post">
+                            <?php echo $post->post; ?>
+                        </h3>
+                        <h4 class="team__descr">
+                            <?php echo $post->descr; ?>
+                        </h4>
+                    </div>
+                    <?php if ($post->linkedin != '') : ?>
+                </a>
+            <?php else : ?>
     </div>
-    <div class="team__btns">
-        <div class="team__prev">
-            <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L12 12L1 23" stroke="white" stroke-width="2" />
-            </svg>
-        </div>
-        <div class="team__next">
-            <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L12 12L1 23" stroke="white" stroke-width="2" />
-            </svg>
-        </div>
-    </div>    
-    <div class="btn" for="contact">CONTACT US</div>
+<?php
+                    endif;
+?>
+<?php endforeach; ?>
+</div>
+<div class="team__btns">
+    <div class="team__prev">
+        <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L12 12L1 23" stroke="white" stroke-width="2" />
+        </svg>
+    </div>
+    <div class="team__next">
+        <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L12 12L1 23" stroke="white" stroke-width="2" />
+        </svg>
+    </div>
+</div>
+<div class="btn" for="contact">CONTACT US</div>
 </section>

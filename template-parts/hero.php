@@ -1,7 +1,13 @@
 <section index="1" bg-color="yellow" class="hero active section" link="hero">
     <div class="hero__slider">
         <div id="hero-slide-1" class="hero__slide">
-            <img class="hero__bg" src=" <?php echo get_field('bg-img', 53); ?>" alt="">
+            <!-- <img class="hero__bg" src=" <?php echo get_field('bg-img', 53); ?>" alt=""> -->
+            <div class="hero__video">
+                <div class="hero__video__bg"></div>
+                <video autoplay muted loop poster='<?php echo get_field('bg-img', 53); ?>'>
+                    <source src="<?php echo bloginfo('template_url'); ?>/assets/video/the3d-bg.mp4" type="video/mp4">
+                </video>
+            </div>
             <div class="hero__content">
                 <h2 class="title">
                     <?php the_field('title', 53); ?>
@@ -25,9 +31,14 @@
                 </div>
                 <div for="about" class="btn">ABOUT US</div>
             </div>
-        </div>
-        <div id="hero-slide-2" class="hero__slide about"  link="about">
-            <img class="hero__bg" src="<?php echo get_field('bg-img', 64); ?>" alt="">
+            <div class="next-slide">
+                <div class="next-slide-icon first-slide">
+
+                </div>
+            </div>
+        </div><!-- <?php echo get_field('bg-img', 64); ?> <?php echo get_field('bg-img', 69); ?> -->
+        <div id="hero-slide-2" class="hero__slide about" link="about">
+            <img class="hero__bg" src="<?php echo bloginfo('template_url'); ?>/assets/img/image/hero-slide-2.png" alt="">
             <div class="hero__content">
                 <h3 class="title">
                     <?php the_field('subtitle', 64); ?>
@@ -57,9 +68,14 @@
                 </div>
                 <div for="service" class="btn btn_white btn_text-pink">SERVICE</div>
             </div>
+            <div class="next-slide">
+                <div class="next-slide-icon first-slide">
+
+                </div>
+            </div>
         </div>
         <div id="hero-slide-3" class="hero__slide">
-        <img class="hero__bg" src=" <?php echo get_field('bg-img', 69); ?>" alt="">
+            <img class="hero__bg" src="<?php echo bloginfo('template_url'); ?>/assets/img/image/hero-slide-3.png" alt="">
             <div class="hero__content">
                 <h3 class="title">
                     <?php the_field('subtitle', 69); ?>
@@ -89,10 +105,48 @@
                 </div>
                 <div for="service" class="btn">SERVICE</div>
             </div>
+            <div class="next-slide">
+                <div class="next-slide-icon first-slide">
+
+                </div>
+            </div>
         </div>
+        <div id="hero-slide-4" class="hero__slide">
+            <img class="hero__bg" src=" <?php the_field('bg-img', 240); ?>" alt="">
+            <div class="hero__content">
+                <h3 class="title">
+                    <?php the_field('subtitle', 240); ?>
+                </h3>
+                <h2 class="title">
+                    <?php the_field('title', 240); ?>
+                </h2>
+                <h4 class="text">
+                    <?php the_field('text', 240); ?>
+                </h4>
+                <div class="dots">
+                    <div class="dot">
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="5" cy="5" r="5" fill="white" />
+                        </svg>
+                    </div>
+                    <div class="dot">
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="5" cy="5" r="5" fill="white" />
+                        </svg>
+                    </div>
+                    <div class="dot">
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="5" cy="5" r="5" fill="white" />
+                        </svg>
+                    </div>
+                </div>
+                <div for="service" class="btn">SERVICE</div>
+            </div>
+        </div>
+
     </div>
     <div class="next-slide">
-        <svg class="start-btn active" style="opacity: 0;" width="47" height="50" viewBox="0 0 47 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="start-btn active" width="47" height="50" viewBox="0 0 47 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M46.84 49.84L46.84 0.230042L38.11 0.230042L38.11 49.84L46.84 49.84Z" fill="white" />
             <path d="M28.17 49.84L28.17 0.230042L19.44 0.230042L19.44 49.84L28.17 49.84Z" fill="white" />
             <path d="M9.5 49.84L9.5 0.230042L0.77 0.230042L0.769998 49.84L9.5 49.84Z" fill="white" />

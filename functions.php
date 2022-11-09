@@ -1,6 +1,7 @@
 <?php
 
 
+add_theme_support('title-tag');
 
 if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
